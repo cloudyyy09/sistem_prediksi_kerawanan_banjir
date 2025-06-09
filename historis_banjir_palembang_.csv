@@ -1,0 +1,121 @@
+kecamatan,tahun,ketinggian_air_cm,tingkat_kerusakan
+Ilir Timur I,2015,107.5,Ringan
+Ilir Timur II,2015,41.8,Sedang
+Ilir Barat I,2015,110.7,Ringan
+Ilir Barat II,2015,147.3,Sedang
+Sukarami,2015,77.3,Ringan
+Kemuning,2015,58.0,Sedang
+Kalidoni,2015,71.4,Ringan
+Sako,2015,65.7,Sedang
+Bukit Kecil,2015,35.5,Ringan
+Seberang Ulu I,2015,84.4,Sedang
+Seberang Ulu II,2015,98.8,Berat
+Plaju,2015,111.4,Sedang
+Kertapati,2015,111.1,Ringan
+Alang-Alang Lebar,2015,60.7,Ringan
+Gandus,2015,51.1,Sedang
+Ilir Timur I,2016,22.9,Ringan
+Ilir Timur II,2016,70.3,Ringan
+Ilir Barat I,2016,69.6,Ringan
+Ilir Barat II,2016,69.7,Berat
+Sukarami,2016,142.2,Sedang
+Kemuning,2016,97.4,Ringan
+Kalidoni,2016,54.4,Ringan
+Sako,2016,131.3,Ringan
+Bukit Kecil,2016,77.6,Berat
+Seberang Ulu I,2016,82.7,Sedang
+Seberang Ulu II,2016,26.9,Berat
+Plaju,2016,94.4,Sedang
+Kertapati,2016,58.0,Ringan
+Alang-Alang Lebar,2016,68.4,Sedang
+Gandus,2016,132.6,Sedang
+Ilir Timur I,2017,103.7,Sedang
+Ilir Timur II,2017,97.5,Sedang
+Ilir Barat I,2017,127.9,Ringan
+Ilir Barat II,2017,116.9,Ringan
+Sukarami,2017,37.2,Sedang
+Kemuning,2017,23.4,Berat
+Kalidoni,2017,97.8,Sedang
+Sako,2017,12.3,Sedang
+Bukit Kecil,2017,87.9,Ringan
+Seberang Ulu I,2017,31.4,Sedang
+Seberang Ulu II,2017,54.6,Sedang
+Plaju,2017,87.6,Ringan
+Kertapati,2017,139.5,Berat
+Alang-Alang Lebar,2017,60.0,Ringan
+Gandus,2017,52.7,Ringan
+Ilir Timur I,2018,108.7,Berat
+Ilir Timur II,2018,59.8,Sedang
+Ilir Barat I,2018,93.0,Sedang
+Ilir Barat II,2018,31.2,Ringan
+Sukarami,2018,43.7,Ringan
+Kemuning,2018,81.8,Sedang
+Kalidoni,2018,24.8,Ringan
+Sako,2018,55.1,Sedang
+Bukit Kecil,2018,128.5,Sedang
+Seberang Ulu I,2018,129.6,Ringan
+Seberang Ulu II,2018,54.4,Ringan
+Plaju,2018,34.0,Berat
+Kertapati,2018,57.4,Sedang
+Alang-Alang Lebar,2018,91.0,Sedang
+Gandus,2018,10.4,Berat
+Ilir Timur I,2019,136.7,Ringan
+Ilir Timur II,2019,50.9,Sedang
+Ilir Barat I,2019,136.3,Berat
+Ilir Barat II,2019,46.1,Sedang
+Sukarami,2019,123.0,Ringan
+Kemuning,2019,112.4,Ringan
+Kalidoni,2019,94.1,Berat
+Sako,2019,147.7,Ringan
+Bukit Kecil,2019,70.0,Ringan
+Seberang Ulu I,2019,73.1,Sedang
+Seberang Ulu II,2019,23.1,Ringan
+Plaju,2019,139.9,Sedang
+Kertapati,2019,74.0,Sedang
+Alang-Alang Lebar,2019,113.9,Ringan
+Gandus,2019,109.2,Berat
+Ilir Timur I,2020,33.2,Sedang
+Ilir Timur II,2020,50.1,Ringan
+Ilir Barat I,2020,103.1,Ringan
+Ilir Barat II,2020,103.1,Berat
+Sukarami,2020,107.5,Ringan
+Kemuning,2020,71.4,Sedang
+Kalidoni,2020,89.2,Ringan
+Sako,2020,91.6,Berat
+Bukit Kecil,2020,57.2,Berat
+Seberang Ulu I,2020,115.1,Sedang
+Seberang Ulu II,2020,115.2,Ringan
+Plaju,2020,130.3,Berat
+Kertapati,2020,137.4,Ringan
+Alang-Alang Lebar,2020,21.4,Ringan
+Gandus,2020,65.9,Ringan
+Ilir Timur I,2021,88.7,Ringan
+Ilir Timur II,2021,38.2,Berat
+Ilir Barat I,2021,75.5,Berat
+Ilir Barat II,2021,11.0,Sedang
+Sukarami,2021,140.5,Sedang
+Kemuning,2021,38.9,Sedang
+Kalidoni,2021,63.1,Sedang
+Sako,2021,14.1,Sedang
+Bukit Kecil,2021,14.5,Sedang
+Seberang Ulu I,2021,76.2,Ringan
+Seberang Ulu II,2021,86.0,Ringan
+Plaju,2021,101.5,Berat
+Kertapati,2021,117.7,Sedang
+Alang-Alang Lebar,2021,24.4,Sedang
+Gandus,2021,102.6,Ringan
+Ilir Timur I,2022,120.9,Sedang
+Ilir Timur II,2022,69.6,Sedang
+Ilir Barat I,2022,67.6,Ringan
+Ilir Barat II,2022,35.4,Ringan
+Sukarami,2022,128.4,Ringan
+Kemuning,2022,68.4,Berat
+Kalidoni,2022,43.1,Berat
+Sako,2022,138.6,Ringan
+Bukit Kecil,2022,74.9,Sedang
+Seberang Ulu I,2022,53.9,Ringan
+Seberang Ulu II,2022,43.8,Ringan
+Plaju,2022,43.4,Berat
+Kertapati,2022,135.3,Ringan
+Alang-Alang Lebar,2022,52.3,Berat
+Gandus,2022,85.5,Sedang
