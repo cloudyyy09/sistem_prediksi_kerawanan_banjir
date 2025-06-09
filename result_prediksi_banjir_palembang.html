@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6c9c5f35edc4f4812f798dfe6237d853 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+
+    Keterangan:
+    ■ Rawan Rendah
+    ■ Rawan Sedang
+    ■ Rawan Tinggi
+
+    
+            <div class="folium-map" id="map_6c9c5f35edc4f4812f798dfe6237d853" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6c9c5f35edc4f4812f798dfe6237d853 = L.map(
+                "map_6c9c5f35edc4f4812f798dfe6237d853",
+                {
+                    center: [-2.9909, 104.7566],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9eda1bde95433509673bab0ca4530e1d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9eda1bde95433509673bab0ca4530e1d.addTo(map_6c9c5f35edc4f4812f798dfe6237d853);
+        
+    
+            var marker_cluster_2f50a58a666ede5e154f9fa8989e50c4 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_1bdb2b2d67c9edf81055dc834dff8ac0 = L.rectangle(
+                [[-2.9909328584698875, 104.75981902504377], [-2.9809328584698878, 104.76981902504376]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_f7bf837e5145939c02c61b7c8ec3a724 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e6dfc4ad3956f1e49e994797478909b0 = $(`<div id="html_e6dfc4ad3956f1e49e994797478909b0" style="width: 100.0%; height: 100.0%;">Ilir Timur IPrediksi: Tinggi</div>`)[0];
+                popup_f7bf837e5145939c02c61b7c8ec3a724.setContent(html_e6dfc4ad3956f1e49e994797478909b0);
+            
+        
+
+        rectangle_1bdb2b2d67c9edf81055dc834dff8ac0.bindPopup(popup_f7bf837e5145939c02c61b7c8ec3a724)
+        ;
+
+        
+    
+    
+            var rectangle_40b85e2fe0ad2b581376a4e05b9338db = L.rectangle(
+                [[-2.9972826430117117, 104.7524704706824], [-2.987282643011712, 104.76247047068239]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_0350d1ba681dcb13b65fb350a2c0f522 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_46cdf2495bb2c89489085fe5e7eaecc5 = $(`<div id="html_46cdf2495bb2c89489085fe5e7eaecc5" style="width: 100.0%; height: 100.0%;">Ilir Timur IIPrediksi: Sedang</div>`)[0];
+                popup_0350d1ba681dcb13b65fb350a2c0f522.setContent(html_46cdf2495bb2c89489085fe5e7eaecc5);
+            
+        
+
+        rectangle_40b85e2fe0ad2b581376a4e05b9338db.bindPopup(popup_0350d1ba681dcb13b65fb350a2c0f522)
+        ;
+
+        
+    
+    
+            var rectangle_531a635ab047f16d2d7c34ffb44fd4c4 = L.rectangle(
+                [[-2.989423114618993, 104.74860992649535], [-2.979423114618993, 104.75860992649534]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_9bbf58bfb115ca2ed2d695d139161b3e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cae4389dccd19f9fbf63887f635a6ee0 = $(`<div id="html_cae4389dccd19f9fbf63887f635a6ee0" style="width: 100.0%; height: 100.0%;">Ilir Barat IPrediksi: Sedang</div>`)[0];
+                popup_9bbf58bfb115ca2ed2d695d139161b3e.setContent(html_cae4389dccd19f9fbf63887f635a6ee0);
+            
+        
+
+        rectangle_531a635ab047f16d2d7c34ffb44fd4c4.bindPopup(popup_9bbf58bfb115ca2ed2d695d139161b3e)
+        ;
+
+        
+    
+    
+            var rectangle_401b5e1bdc02c564b878df14a254ff96 = L.rectangle(
+                [[-2.9806697014359194, 104.75251760776537], [-2.9706697014359196, 104.76251760776536]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_3513aa3a7a5b9021f05a488ad81b68a7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9817a2a0bba904ac3c0438d93b43877f = $(`<div id="html_9817a2a0bba904ac3c0438d93b43877f" style="width: 100.0%; height: 100.0%;">Ilir Barat IIPrediksi: Rendah</div>`)[0];
+                popup_3513aa3a7a5b9021f05a488ad81b68a7.setContent(html_9817a2a0bba904ac3c0438d93b43877f);
+            
+        
+
+        rectangle_401b5e1bdc02c564b878df14a254ff96.bindPopup(popup_3513aa3a7a5b9021f05a488ad81b68a7)
+        ;
+
+        
+    
+    
+            var rectangle_31e4827bffc94ab1fda78a7019739cd8 = L.rectangle(
+                [[-2.9982415337472332, 104.731724310854], [-2.9882415337472334, 104.741724310854]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_f6e4b9c015e87700637cc82813895369 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c2ac842663533381852e8ba082a73557 = $(`<div id="html_c2ac842663533381852e8ba082a73557" style="width: 100.0%; height: 100.0%;">SukaramiPrediksi: Rendah</div>`)[0];
+                popup_f6e4b9c015e87700637cc82813895369.setContent(html_c2ac842663533381852e8ba082a73557);
+            
+        
+
+        rectangle_31e4827bffc94ab1fda78a7019739cd8.bindPopup(popup_f6e4b9c015e87700637cc82813895369)
+        ;
+
+        
+    
+    
+            var rectangle_cb752e3e86aa23fc411e445bd24e19cc = L.rectangle(
+                [[-2.9982413695694916, 104.74940328112163], [-2.988241369569492, 104.75940328112162]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_f73009c1b61089e73e889ab3815d4855 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_71b2fbac04829f75bdfe310e0203b9d9 = $(`<div id="html_71b2fbac04829f75bdfe310e0203b9d9" style="width: 100.0%; height: 100.0%;">KemuningPrediksi: Sedang</div>`)[0];
+                popup_f73009c1b61089e73e889ab3815d4855.setContent(html_71b2fbac04829f75bdfe310e0203b9d9);
+            
+        
+
+        rectangle_cb752e3e86aa23fc411e445bd24e19cc.bindPopup(popup_f73009c1b61089e73e889ab3815d4855)
+        ;
+
+        
+    
+    
+            var rectangle_695495f97d0b7e16fede804766e880db = L.rectangle(
+                [[-2.980107871844926, 104.75517112571512], [-2.970107871844926, 104.76517112571511]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_6a31ff1fffa8fab96937ec074b7c8032 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5b0cf8d2a3daefa945c6474508146022 = $(`<div id="html_5b0cf8d2a3daefa945c6474508146022" style="width: 100.0%; height: 100.0%;">KalidoniPrediksi: Rendah</div>`)[0];
+                popup_6a31ff1fffa8fab96937ec074b7c8032.setContent(html_5b0cf8d2a3daefa945c6474508146022);
+            
+        
+
+        rectangle_695495f97d0b7e16fede804766e880db.bindPopup(popup_6a31ff1fffa8fab96937ec074b7c8032)
+        ;
+
+        
+    
+    
+            var rectangle_a58271089881cfe1ad2726e0907e6b49 = L.rectangle(
+                [[-2.9882256527084707, 104.76637894044742], [-2.978225652708471, 104.77637894044742]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_bb3838aaf391105807cc552cec354c89 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_258e0b14dd778aba4a756cb6eedc21d1 = $(`<div id="html_258e0b14dd778aba4a756cb6eedc21d1" style="width: 100.0%; height: 100.0%;">SakoPrediksi: Sedang</div>`)[0];
+                popup_bb3838aaf391105807cc552cec354c89.setContent(html_258e0b14dd778aba4a756cb6eedc21d1);
+            
+        
+
+        rectangle_a58271089881cfe1ad2726e0907e6b49.bindPopup(popup_bb3838aaf391105807cc552cec354c89)
+        ;
+
+        
+    
+    
+            var rectangle_aab28b7e57a2a1f4bfac4dce541c1499 = L.rectangle(
+                [[-3.000594743859349, 104.74641729781727], [-2.9905947438593494, 104.75641729781726]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_148f5216605538de2d886c6a59ef2d4a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_60fe7f3f09fbb352eafd0a5a8d4b90cd = $(`<div id="html_60fe7f3f09fbb352eafd0a5a8d4b90cd" style="width: 100.0%; height: 100.0%;">Bukit KecilPrediksi: Tinggi</div>`)[0];
+                popup_148f5216605538de2d886c6a59ef2d4a.setContent(html_60fe7f3f09fbb352eafd0a5a8d4b90cd);
+            
+        
+
+        rectangle_aab28b7e57a2a1f4bfac4dce541c1499.bindPopup(popup_148f5216605538de2d886c6a59ef2d4a)
+        ;
+
+        
+    
+    
+            var rectangle_5c5a6a08d82d480f14c6a9b818788794 = L.rectangle(
+                [[-2.9904743995641403, 104.74351506397107], [-2.9804743995641405, 104.75351506397107]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_8fb51449f90f31fcfbf1a64be4adfe64 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cdff4bc7319065b2dce7935cca856507 = $(`<div id="html_cdff4bc7319065b2dce7935cca856507" style="width: 100.0%; height: 100.0%;">Seberang Ulu IPrediksi: Tinggi</div>`)[0];
+                popup_8fb51449f90f31fcfbf1a64be4adfe64.setContent(html_cdff4bc7319065b2dce7935cca856507);
+            
+        
+
+        rectangle_5c5a6a08d82d480f14c6a9b818788794.bindPopup(popup_8fb51449f90f31fcfbf1a64be4adfe64)
+        ;
+
+        
+    
+    
+            var rectangle_4a929d17631baade8b8675e1c5271326 = L.rectangle(
+                [[-3.0005341769281246, 104.74658242956417], [-2.990534176928125, 104.75658242956416]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_24ac91696d97e3b7a86db53e79fcd219 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_65dc48c4643353d92fefb2a65d12287e = $(`<div id="html_65dc48c4643353d92fefb2a65d12287e" style="width: 100.0%; height: 100.0%;">Seberang Ulu IIPrediksi: Sedang</div>`)[0];
+                popup_24ac91696d97e3b7a86db53e79fcd219.setContent(html_65dc48c4643353d92fefb2a65d12287e);
+            
+        
+
+        rectangle_4a929d17631baade8b8675e1c5271326.bindPopup(popup_24ac91696d97e3b7a86db53e79fcd219)
+        ;
+
+        
+    
+    
+            var rectangle_5bd1a30637001b0328db52547908f4cf = L.rectangle(
+                [[-3.0005572975357024, 104.76075402117704], [-2.9905572975357027, 104.77075402117703]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_dee144645e4a05998bb13d6016d86fb5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5ce2b8a38b883d6bea3994a265b8dec3 = $(`<div id="html_5ce2b8a38b883d6bea3994a265b8dec3" style="width: 100.0%; height: 100.0%;">PlajuPrediksi: Rendah</div>`)[0];
+                popup_dee144645e4a05998bb13d6016d86fb5.setContent(html_5ce2b8a38b883d6bea3994a265b8dec3);
+            
+        
+
+        rectangle_5bd1a30637001b0328db52547908f4cf.bindPopup(popup_dee144645e4a05998bb13d6016d86fb5)
+        ;
+
+        
+    
+    
+            var rectangle_b8069f5846b18d30728e215e8dab4667 = L.rectangle(
+                [[-2.9934803772843392, 104.75488751109661], [-2.9834803772843395, 104.7648875110966]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_af259d18de91202f8bb1aaee0dfe6acc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_933c4395f1d00e30f28095a6daad163b = $(`<div id="html_933c4395f1d00e30f28095a6daad163b" style="width: 100.0%; height: 100.0%;">KertapatiPrediksi: Sedang</div>`)[0];
+                popup_af259d18de91202f8bb1aaee0dfe6acc.setContent(html_933c4395f1d00e30f28095a6daad163b);
+            
+        
+
+        rectangle_b8069f5846b18d30728e215e8dab4667.bindPopup(popup_af259d18de91202f8bb1aaee0dfe6acc)
+        ;
+
+        
+    
+    
+            var rectangle_9734579e5db6ac950aec82b09af145c8 = L.rectangle(
+                [[-3.015032802446578, 104.74630239796234], [-3.005032802446578, 104.75630239796233]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_25f09a219d8fcbb182812cabb29bd559 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7c2bba0ea84dc930707a21b6bfa8a169 = $(`<div id="html_7c2bba0ea84dc930707a21b6bfa8a169" style="width: 100.0%; height: 100.0%;">Alang-Alang LebarPrediksi: Sedang</div>`)[0];
+                popup_25f09a219d8fcbb182812cabb29bd559.setContent(html_7c2bba0ea84dc930707a21b6bfa8a169);
+            
+        
+
+        rectangle_9734579e5db6ac950aec82b09af145c8.bindPopup(popup_25f09a219d8fcbb182812cabb29bd559)
+        ;
+
+        
+    
+    
+            var rectangle_8b94bf55d5a3f736f34415b006d92a89 = L.rectangle(
+                [[-3.01314917832513, 104.75673267433115], [-3.0031491783251303, 104.76673267433114]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_208b57a48fcc010a6076b96688422852 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_757990efa4d6fcc458731ffafb8cae02 = $(`<div id="html_757990efa4d6fcc458731ffafb8cae02" style="width: 100.0%; height: 100.0%;">GandusPrediksi: Rendah</div>`)[0];
+                popup_208b57a48fcc010a6076b96688422852.setContent(html_757990efa4d6fcc458731ffafb8cae02);
+            
+        
+
+        rectangle_8b94bf55d5a3f736f34415b006d92a89.bindPopup(popup_208b57a48fcc010a6076b96688422852)
+        ;
+
+        
+    
+    
+            var rectangle_389fc395715f6daebf9d0035cc6230c3 = L.rectangle(
+                [[-3.0015228752924097, 104.7525707754935], [-2.99152287529241, 104.76257077549349]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_2a54ab0652860ffe3650c979737f2dc7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b86ed88890f4b78244728f790324f28e = $(`<div id="html_b86ed88890f4b78244728f790324f28e" style="width: 100.0%; height: 100.0%;">Ilir Timur IPrediksi: Tinggi</div>`)[0];
+                popup_2a54ab0652860ffe3650c979737f2dc7.setContent(html_b86ed88890f4b78244728f790324f28e);
+            
+        
+
+        rectangle_389fc395715f6daebf9d0035cc6230c3.bindPopup(popup_2a54ab0652860ffe3650c979737f2dc7)
+        ;
+
+        
+    
+    
+            var rectangle_57608279d37d1091c37e71bbc216e702 = L.rectangle(
+                [[-3.006028311203344, 104.76128644990534], [-2.9960283112033443, 104.77128644990533]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_76369689d463c331c409e7723193c045 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_db7a3bf401335f838ac1f455367a4abc = $(`<div id="html_db7a3bf401335f838ac1f455367a4abc" style="width: 100.0%; height: 100.0%;">Ilir Timur IIPrediksi: Sedang</div>`)[0];
+                popup_76369689d463c331c409e7723193c045.setContent(html_db7a3bf401335f838ac1f455367a4abc);
+            
+        
+
+        rectangle_57608279d37d1091c37e71bbc216e702.bindPopup(popup_76369689d463c331c409e7723193c045)
+        ;
+
+        
+    
+    
+            var rectangle_8dae08c9d975dd9b8659f7cf1776ee18 = L.rectangle(
+                [[-2.992757526674047, 104.74457946906124], [-2.9827575266740474, 104.75457946906123]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_9d349454bfcbaa28c84c5460eff45e67 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_95d9ae0d764039e9ec10d9e621ce78d8 = $(`<div id="html_95d9ae0d764039e9ec10d9e621ce78d8" style="width: 100.0%; height: 100.0%;">Ilir Barat IPrediksi: Tinggi</div>`)[0];
+                popup_9d349454bfcbaa28c84c5460eff45e67.setContent(html_95d9ae0d764039e9ec10d9e621ce78d8);
+            
+        
+
+        rectangle_8dae08c9d975dd9b8659f7cf1776ee18.bindPopup(popup_9d349454bfcbaa28c84c5460eff45e67)
+        ;
+
+        
+    
+    
+            var rectangle_65b541e5e7f97e2c86667bb2982723e0 = L.rectangle(
+                [[-3.004980240755212, 104.74832337853404], [-2.994980240755212, 104.75832337853403]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_5381c43c3b9850d604ea430509d4000d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1ce171a03db01caf4323c9e49a7ae56b = $(`<div id="html_1ce171a03db01caf4323c9e49a7ae56b" style="width: 100.0%; height: 100.0%;">Ilir Barat IIPrediksi: Rendah</div>`)[0];
+                popup_5381c43c3b9850d604ea430509d4000d.setContent(html_1ce171a03db01caf4323c9e49a7ae56b);
+            
+        
+
+        rectangle_65b541e5e7f97e2c86667bb2982723e0.bindPopup(popup_5381c43c3b9850d604ea430509d4000d)
+        ;
+
+        
+    
+    
+            var rectangle_9d7308a3fee8b0fdf28b10c4d06f503e = L.rectangle(
+                [[-3.0100230370133527, 104.7476789184687], [-3.000023037013353, 104.75767891846868]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_9245c042fd60302dc36e2ddd76b875f4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_10751c53676acc5200489aa406a7a70f = $(`<div id="html_10751c53676acc5200489aa406a7a70f" style="width: 100.0%; height: 100.0%;">SukaramiPrediksi: Tinggi</div>`)[0];
+                popup_9245c042fd60302dc36e2ddd76b875f4.setContent(html_10751c53676acc5200489aa406a7a70f);
+            
+        
+
+        rectangle_9d7308a3fee8b0fdf28b10c4d06f503e.bindPopup(popup_9245c042fd60302dc36e2ddd76b875f4)
+        ;
+
+        
+    
+    
+            var rectangle_2e020557806b6273482618f8d1a12ec0 = L.rectangle(
+                [[-2.981243512310784, 104.73696485051869], [-2.9712435123107843, 104.74696485051868]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_2381acd5861acc45f8d31b1b23b22739 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_82df8c114e474287ceeda871df1b32ff = $(`<div id="html_82df8c114e474287ceeda871df1b32ff" style="width: 100.0%; height: 100.0%;">KemuningPrediksi: Tinggi</div>`)[0];
+                popup_2381acd5861acc45f8d31b1b23b22739.setContent(html_82df8c114e474287ceeda871df1b32ff);
+            
+        
+
+        rectangle_2e020557806b6273482618f8d1a12ec0.bindPopup(popup_2381acd5861acc45f8d31b1b23b22739)
+        ;
+
+        
+    
+    
+            var rectangle_322c2851e2793b7357b084514b446145 = L.rectangle(
+                [[-2.998157763004865, 104.75456120277066], [-2.9881577630048652, 104.76456120277065]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_ec32b4f530d3b7680f4e8e38dcfc527f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_27b61e2d511de1c0606c22f429e0a50a = $(`<div id="html_27b61e2d511de1c0606c22f429e0a50a" style="width: 100.0%; height: 100.0%;">KalidoniPrediksi: Sedang</div>`)[0];
+                popup_ec32b4f530d3b7680f4e8e38dcfc527f.setContent(html_27b61e2d511de1c0606c22f429e0a50a);
+            
+        
+
+        rectangle_322c2851e2793b7357b084514b446145.bindPopup(popup_ec32b4f530d3b7680f4e8e38dcfc527f)
+        ;
+
+        
+    
+    
+            var rectangle_778f11d301621077887580f297c4395f = L.rectangle(
+                [[-2.9952247179531204, 104.75421055272182], [-2.9852247179531206, 104.7642105527218]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_c0ad5fbc96c2db569a2d2eafc0046ada = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b061988a63f53ddd3a91afdec416ea5f = $(`<div id="html_b061988a63f53ddd3a91afdec416ea5f" style="width: 100.0%; height: 100.0%;">SakoPrediksi: Tinggi</div>`)[0];
+                popup_c0ad5fbc96c2db569a2d2eafc0046ada.setContent(html_b061988a63f53ddd3a91afdec416ea5f);
+            
+        
+
+        rectangle_778f11d301621077887580f297c4395f.bindPopup(popup_c0ad5fbc96c2db569a2d2eafc0046ada)
+        ;
+
+        
+    
+    
+            var rectangle_6475d421b1ba2de70ae97530254da552 = L.rectangle(
+                [[-3.0101474818621345, 104.75165113456643], [-3.0001474818621348, 104.76165113456642]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_4b6658fe55acb5ff003e3add310af19a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c74d381b51b10b6791c1e49077000bb7 = $(`<div id="html_c74d381b51b10b6791c1e49077000bb7" style="width: 100.0%; height: 100.0%;">Bukit KecilPrediksi: Sedang</div>`)[0];
+                popup_4b6658fe55acb5ff003e3add310af19a.setContent(html_c74d381b51b10b6791c1e49077000bb7);
+            
+        
+
+        rectangle_6475d421b1ba2de70ae97530254da552.bindPopup(popup_4b6658fe55acb5ff003e3add310af19a)
+        ;
+
+        
+    
+    
+            var rectangle_e0e1a1fc93c707285edd2717a446bffb = L.rectangle(
+                [[-3.0013438272452517, 104.74925412866627], [-2.991343827245252, 104.75925412866626]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_775198945c27471bb93a93e49e652cdf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_64ef68d6a119a2625d1ed3ec7c2fc679 = $(`<div id="html_64ef68d6a119a2625d1ed3ec7c2fc679" style="width: 100.0%; height: 100.0%;">Seberang Ulu IPrediksi: Sedang</div>`)[0];
+                popup_775198945c27471bb93a93e49e652cdf.setContent(html_64ef68d6a119a2625d1ed3ec7c2fc679);
+            
+        
+
+        rectangle_e0e1a1fc93c707285edd2717a446bffb.bindPopup(popup_775198945c27471bb93a93e49e652cdf)
+        ;
+
+        
+    
+    
+            var rectangle_6cbb98369c93a73a93443688c197a73c = L.rectangle(
+                [[-2.994790774102901, 104.7374462925795], [-2.984790774102901, 104.7474462925795]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_2d579c41de9f9213b9668658ad86f51e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_60035cec24610bb4a8c370b021a30850 = $(`<div id="html_60035cec24610bb4a8c370b021a30850" style="width: 100.0%; height: 100.0%;">Seberang Ulu IIPrediksi: Rendah</div>`)[0];
+                popup_2d579c41de9f9213b9668658ad86f51e.setContent(html_60035cec24610bb4a8c370b021a30850);
+            
+        
+
+        rectangle_6cbb98369c93a73a93443688c197a73c.bindPopup(popup_2d579c41de9f9213b9668658ad86f51e)
+        ;
+
+        
+    
+    
+            var rectangle_ddac1f770cfa333597953149b886efa0 = L.rectangle(
+                [[-3.007409935774223, 104.74739354677236], [-2.997409935774223, 104.75739354677235]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_567d953d03f532766b1b68a0ba7c2069 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5e5c2501057c8a201b3ab313cec440bf = $(`<div id="html_5e5c2501057c8a201b3ab313cec440bf" style="width: 100.0%; height: 100.0%;">PlajuPrediksi: Tinggi</div>`)[0];
+                popup_567d953d03f532766b1b68a0ba7c2069.setContent(html_5e5c2501057c8a201b3ab313cec440bf);
+            
+        
+
+        rectangle_ddac1f770cfa333597953149b886efa0.bindPopup(popup_567d953d03f532766b1b68a0ba7c2069)
+        ;
+
+        
+    
+    
+            var rectangle_331d91491387bc8bbb6a5d2d7f3ecee9 = L.rectangle(
+                [[-2.992143019816543, 104.74817285483475], [-2.9821430198165433, 104.75817285483474]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_8d9cb994db85f1055d93dc47db139e49 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4b8a7d49caab40b9ff12f088cb8a0d93 = $(`<div id="html_4b8a7d49caab40b9ff12f088cb8a0d93" style="width: 100.0%; height: 100.0%;">KertapatiPrediksi: Sedang</div>`)[0];
+                popup_8d9cb994db85f1055d93dc47db139e49.setContent(html_4b8a7d49caab40b9ff12f088cb8a0d93);
+            
+        
+
+        rectangle_331d91491387bc8bbb6a5d2d7f3ecee9.bindPopup(popup_8d9cb994db85f1055d93dc47db139e49)
+        ;
+
+        
+    
+    
+            var rectangle_6f62378918027dcbfdab0464f3df72f2 = L.rectangle(
+                [[-3.0019063868991878, 104.7435772273078], [-2.991906386899188, 104.75357722730779]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_3c8596a9a50be83c028a1d1daa6865f3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bcf6bc40232401a437401f5d27154ca7 = $(`<div id="html_bcf6bc40232401a437401f5d27154ca7" style="width: 100.0%; height: 100.0%;">Alang-Alang LebarPrediksi: Tinggi</div>`)[0];
+                popup_3c8596a9a50be83c028a1d1daa6865f3.setContent(html_bcf6bc40232401a437401f5d27154ca7);
+            
+        
+
+        rectangle_6f62378918027dcbfdab0464f3df72f2.bindPopup(popup_3c8596a9a50be83c028a1d1daa6865f3)
+        ;
+
+        
+    
+    
+            var rectangle_622412004f2977a942d3c356c9f54a55 = L.rectangle(
+                [[-2.9988169374979328, 104.74998714288336], [-2.988816937497933, 104.75998714288335]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_3008744d95ccd7d3a1a499cc9cc04035 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2082545b07db01d5c41a180b6febbfd7 = $(`<div id="html_2082545b07db01d5c41a180b6febbfd7" style="width: 100.0%; height: 100.0%;">GandusPrediksi: Tinggi</div>`)[0];
+                popup_3008744d95ccd7d3a1a499cc9cc04035.setContent(html_2082545b07db01d5c41a180b6febbfd7);
+            
+        
+
+        rectangle_622412004f2977a942d3c356c9f54a55.bindPopup(popup_3008744d95ccd7d3a1a499cc9cc04035)
+        ;
+
+        
+    
+    
+            var rectangle_ce32f0cf33b1b2b09c0c3981186ad62d = L.rectangle(
+                [[-3.0019170661222936, 104.75564050856815], [-2.991917066122294, 104.76564050856814]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_3342b8e2a513816bc828ed67995e68b2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_00e009bf8cf2a3133e0982c02ea95052 = $(`<div id="html_00e009bf8cf2a3133e0982c02ea95052" style="width: 100.0%; height: 100.0%;">Ilir Timur IPrediksi: Rendah</div>`)[0];
+                popup_3342b8e2a513816bc828ed67995e68b2.setContent(html_00e009bf8cf2a3133e0982c02ea95052);
+            
+        
+
+        rectangle_ce32f0cf33b1b2b09c0c3981186ad62d.bindPopup(popup_3342b8e2a513816bc828ed67995e68b2)
+        ;
+
+        
+    
+    
+            var rectangle_a5fb9b3aa1abcd426cf04e6d854bab8d = L.rectangle(
+                [[-2.9773772181549103, 104.77046185901212], [-2.9673772181549105, 104.7804618590121]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_33e46a3e28d6c3c5971f96ff13b015a8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f51a499ece9ac869f342b89dbd7b1db9 = $(`<div id="html_f51a499ece9ac869f342b89dbd7b1db9" style="width: 100.0%; height: 100.0%;">Ilir Timur IIPrediksi: Sedang</div>`)[0];
+                popup_33e46a3e28d6c3c5971f96ff13b015a8.setContent(html_f51a499ece9ac869f342b89dbd7b1db9);
+            
+        
+
+        rectangle_a5fb9b3aa1abcd426cf04e6d854bab8d.bindPopup(popup_33e46a3e28d6c3c5971f96ff13b015a8)
+        ;
+
+        
+    
+    
+            var rectangle_4297488be21bc10e7cc8e63989704b6e = L.rectangle(
+                [[-2.996034972247379, 104.75334577812833], [-2.986034972247379, 104.76334577812833]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_b57ba16cd109885498f96e1a2e5fb096 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1849906a011851f5cab913a26477b1f4 = $(`<div id="html_1849906a011851f5cab913a26477b1f4" style="width: 100.0%; height: 100.0%;">Ilir Barat IPrediksi: Tinggi</div>`)[0];
+                popup_b57ba16cd109885498f96e1a2e5fb096.setContent(html_1849906a011851f5cab913a26477b1f4);
+            
+        
+
+        rectangle_4297488be21bc10e7cc8e63989704b6e.bindPopup(popup_b57ba16cd109885498f96e1a2e5fb096)
+        ;
+
+        
+    
+    
+            var rectangle_a78e18098cc6b84b21cdcaadfbc51cec = L.rectangle(
+                [[-3.0064771092895586, 104.75417550390723], [-2.996477109289559, 104.76417550390723]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_5e8ccce698dd78c7a329aa79193a7886 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6e6b89344b835dc72562e7a15bc7ffd2 = $(`<div id="html_6e6b89344b835dc72562e7a15bc7ffd2" style="width: 100.0%; height: 100.0%;">Ilir Barat IIPrediksi: Tinggi</div>`)[0];
+                popup_5e8ccce698dd78c7a329aa79193a7886.setContent(html_6e6b89344b835dc72562e7a15bc7ffd2);
+            
+        
+
+        rectangle_a78e18098cc6b84b21cdcaadfbc51cec.bindPopup(popup_5e8ccce698dd78c7a329aa79193a7886)
+        ;
+
+        
+    
+    
+            var rectangle_36db84b105cc5db4dc90cebf38d1dced = L.rectangle(
+                [[-2.987674550878968, 104.75085554084235], [-2.977674550878968, 104.76085554084234]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_3cf14a3f9b565e18f84ea942287d5a52 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_777c7fee2dd97d2c0c9ab2b69e426663 = $(`<div id="html_777c7fee2dd97d2c0c9ab2b69e426663" style="width: 100.0%; height: 100.0%;">SukaramiPrediksi: Tinggi</div>`)[0];
+                popup_3cf14a3f9b565e18f84ea942287d5a52.setContent(html_777c7fee2dd97d2c0c9ab2b69e426663);
+            
+        
+
+        rectangle_36db84b105cc5db4dc90cebf38d1dced.bindPopup(popup_3cf14a3f9b565e18f84ea942287d5a52)
+        ;
+
+        
+    
+    
+            var rectangle_ab1fdeef3c171ccc541f3fad2e9ba2de = L.rectangle(
+                [[-3.00810843649971, 104.73241228784703], [-2.9981084364997104, 104.74241228784702]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_fb7049f454e5a6f9bf49f12a1a763c29 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7df01951aa073d5f8585936f2410fa7d = $(`<div id="html_7df01951aa073d5f8585936f2410fa7d" style="width: 100.0%; height: 100.0%;">KemuningPrediksi: Sedang</div>`)[0];
+                popup_fb7049f454e5a6f9bf49f12a1a763c29.setContent(html_7df01951aa073d5f8585936f2410fa7d);
+            
+        
+
+        rectangle_ab1fdeef3c171ccc541f3fad2e9ba2de.bindPopup(popup_fb7049f454e5a6f9bf49f12a1a763c29)
+        ;
+
+        
+    
+    
+            var rectangle_3248fc94007e21d525ae0aac6fe13204 = L.rectangle(
+                [[-2.9938113640499524, 104.75133486124552], [-2.9838113640499526, 104.76133486124552]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_38785722fa4cb31d1073aef8dd69c82d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0dc365456e8d9c9901846f5d540f9253 = $(`<div id="html_0dc365456e8d9c9901846f5d540f9253" style="width: 100.0%; height: 100.0%;">KalidoniPrediksi: Sedang</div>`)[0];
+                popup_38785722fa4cb31d1073aef8dd69c82d.setContent(html_0dc365456e8d9c9901846f5d540f9253);
+            
+        
+
+        rectangle_3248fc94007e21d525ae0aac6fe13204.bindPopup(popup_38785722fa4cb31d1073aef8dd69c82d)
+        ;
+
+        
+    
+    
+            var rectangle_46bec4506e57e7eb9298b4aad4b4b79c = L.rectangle(
+                [[-3.0154967012387974, 104.75220230209942], [-3.0054967012387976, 104.76220230209941]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_18dddb585d86e26dd3f60db3bddd94b7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f6f1a665c51206fabe9115e2ddb1199d = $(`<div id="html_f6f1a665c51206fabe9115e2ddb1199d" style="width: 100.0%; height: 100.0%;">SakoPrediksi: Sedang</div>`)[0];
+                popup_18dddb585d86e26dd3f60db3bddd94b7.setContent(html_f6f1a665c51206fabe9115e2ddb1199d);
+            
+        
+
+        rectangle_46bec4506e57e7eb9298b4aad4b4b79c.bindPopup(popup_18dddb585d86e26dd3f60db3bddd94b7)
+        ;
+
+        
+    
+    
+            var rectangle_8855536ed33b6b87b36738e88a08bf59 = L.rectangle(
+                [[-3.009181860488984, 104.77623242112486], [-2.999181860488984, 104.78623242112485]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_49fe6e04c974cbb1f4c073bc3fffad7b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b55df5d2d00d5c91ceefe7623a059c35 = $(`<div id="html_b55df5d2d00d5c91ceefe7623a059c35" style="width: 100.0%; height: 100.0%;">Bukit KecilPrediksi: Sedang</div>`)[0];
+                popup_49fe6e04c974cbb1f4c073bc3fffad7b.setContent(html_b55df5d2d00d5c91ceefe7623a059c35);
+            
+        
+
+        rectangle_8855536ed33b6b87b36738e88a08bf59.bindPopup(popup_49fe6e04c974cbb1f4c073bc3fffad7b)
+        ;
+
+        
+    
+    
+            var rectangle_b4b3cd075f12799c490e5b2a9d9cd4ef = L.rectangle(
+                [[-2.9939313876413087, 104.74967639035219], [-2.983931387641309, 104.75967639035218]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_05d4bdc9f4e9ea9847864ad59d6a264b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fde900e6bc55651942de216490256681 = $(`<div id="html_fde900e6bc55651942de216490256681" style="width: 100.0%; height: 100.0%;">Seberang Ulu IPrediksi: Tinggi</div>`)[0];
+                popup_05d4bdc9f4e9ea9847864ad59d6a264b.setContent(html_fde900e6bc55651942de216490256681);
+            
+        
+
+        rectangle_b4b3cd075f12799c490e5b2a9d9cd4ef.bindPopup(popup_05d4bdc9f4e9ea9847864ad59d6a264b)
+        ;
+
+        
+    
+    
+            var rectangle_ef46b9a0f752ee5761cfc62b01a781aa = L.rectangle(
+                [[-2.988515334200046, 104.75461547342334], [-2.978515334200046, 104.76461547342333]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_dfa9026d15489fc42ed78c5224d925bb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2208f8d4bc9a7f87fb4d45043e95762a = $(`<div id="html_2208f8d4bc9a7f87fb4d45043e95762a" style="width: 100.0%; height: 100.0%;">Seberang Ulu IIPrediksi: Tinggi</div>`)[0];
+                popup_dfa9026d15489fc42ed78c5224d925bb.setContent(html_2208f8d4bc9a7f87fb4d45043e95762a);
+            
+        
+
+        rectangle_ef46b9a0f752ee5761cfc62b01a781aa.bindPopup(popup_dfa9026d15489fc42ed78c5224d925bb)
+        ;
+
+        
+    
+    
+            var rectangle_5f7769282bfdd8b61f7b0b3f13ba2664 = L.rectangle(
+                [[-2.9941863171881002, 104.75125288230296], [-2.9841863171881005, 104.76125288230295]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_9d8f0b1b2a0aec0998d6b892def05bfa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_507957d726f502b0105872e2ac3e7400 = $(`<div id="html_507957d726f502b0105872e2ac3e7400" style="width: 100.0%; height: 100.0%;">PlajuPrediksi: Tinggi</div>`)[0];
+                popup_9d8f0b1b2a0aec0998d6b892def05bfa.setContent(html_507957d726f502b0105872e2ac3e7400);
+            
+        
+
+        rectangle_5f7769282bfdd8b61f7b0b3f13ba2664.bindPopup(popup_9d8f0b1b2a0aec0998d6b892def05bfa)
+        ;
+
+        
+    
+    
+            var rectangle_360ecc29f4591236d63b4c5601ee8ace = L.rectangle(
+                [[-2.9970564828238824, 104.73991321962382], [-2.9870564828238826, 104.7499132196238]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_d67a17a4df30a26426a3ae377ca81e8f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c06951c1d5685ef8518f6e9526529710 = $(`<div id="html_c06951c1d5685ef8518f6e9526529710" style="width: 100.0%; height: 100.0%;">KertapatiPrediksi: Tinggi</div>`)[0];
+                popup_d67a17a4df30a26426a3ae377ca81e8f.setContent(html_c06951c1d5685ef8518f6e9526529710);
+            
+        
+
+        rectangle_360ecc29f4591236d63b4c5601ee8ace.bindPopup(popup_d67a17a4df30a26426a3ae377ca81e8f)
+        ;
+
+        
+    
+    
+            var rectangle_f0855d3292b1ce45258ad360914a735f = L.rectangle(
+                [[-2.9989110369558927, 104.76302822814516], [-2.988911036955893, 104.77302822814515]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_4b6f2fce3119adc19f14abf243742fad = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a21cdf866321f6407fc5b4a364ce1d6a = $(`<div id="html_a21cdf866321f6407fc5b4a364ce1d6a" style="width: 100.0%; height: 100.0%;">Alang-Alang LebarPrediksi: Rendah</div>`)[0];
+                popup_4b6f2fce3119adc19f14abf243742fad.setContent(html_a21cdf866321f6407fc5b4a364ce1d6a);
+            
+        
+
+        rectangle_f0855d3292b1ce45258ad360914a735f.bindPopup(popup_4b6f2fce3119adc19f14abf243742fad)
+        ;
+
+        
+    
+    
+            var rectangle_a7400c0bb25efc27cce0d061f55d2d70 = L.rectangle(
+                [[-3.010685219903674, 104.75911933032688], [-3.000685219903674, 104.76911933032687]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_cd7cdabcbc29955cff845859b725db48 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a460a0fa93ef46655652e98fbf5dea0a = $(`<div id="html_a460a0fa93ef46655652e98fbf5dea0a" style="width: 100.0%; height: 100.0%;">GandusPrediksi: Sedang</div>`)[0];
+                popup_cd7cdabcbc29955cff845859b725db48.setContent(html_a460a0fa93ef46655652e98fbf5dea0a);
+            
+        
+
+        rectangle_a7400c0bb25efc27cce0d061f55d2d70.bindPopup(popup_cd7cdabcbc29955cff845859b725db48)
+        ;
+
+        
+    
+    
+            var rectangle_e9275118ad595ee59c170d6a48416eda = L.rectangle(
+                [[-3.003098442083947, 104.75951031947044], [-2.993098442083947, 104.76951031947043]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_084883b8f8b4fec32bf79c7654e86342 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f7fcac9735c166e5ba92ea44fbc422e = $(`<div id="html_7f7fcac9735c166e5ba92ea44fbc422e" style="width: 100.0%; height: 100.0%;">Ilir Timur IPrediksi: Sedang</div>`)[0];
+                popup_084883b8f8b4fec32bf79c7654e86342.setContent(html_7f7fcac9735c166e5ba92ea44fbc422e);
+            
+        
+
+        rectangle_e9275118ad595ee59c170d6a48416eda.bindPopup(popup_084883b8f8b4fec32bf79c7654e86342)
+        ;
+
+        
+    
+    
+            var rectangle_c0cecab0f922e4c5029e55060f7c2cf0 = L.rectangle(
+                [[-3.000506387709598, 104.74250612545207], [-2.990506387709598, 104.75250612545206]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_8ff399112edf8a62f15dab2973b546ea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4a0d6e1fbc618fc3c4c5f8654421c781 = $(`<div id="html_4a0d6e1fbc618fc3c4c5f8654421c781" style="width: 100.0%; height: 100.0%;">Ilir Timur IIPrediksi: Rendah</div>`)[0];
+                popup_8ff399112edf8a62f15dab2973b546ea.setContent(html_4a0d6e1fbc618fc3c4c5f8654421c781);
+            
+        
+
+        rectangle_c0cecab0f922e4c5029e55060f7c2cf0.bindPopup(popup_8ff399112edf8a62f15dab2973b546ea)
+        ;
+
+        
+    
+    
+            var rectangle_b96daea81cb94a04cd9185e1fbb9d0bd = L.rectangle(
+                [[-2.9853287777378106, 104.76562794310937], [-2.975328777737811, 104.77562794310936]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_20f2150e2bf5497eb057663c958c34e7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_18d8e4292a8d4bcc2aa809f42d88eb91 = $(`<div id="html_18d8e4292a8d4bcc2aa809f42d88eb91" style="width: 100.0%; height: 100.0%;">Ilir Barat IPrediksi: Sedang</div>`)[0];
+                popup_20f2150e2bf5497eb057663c958c34e7.setContent(html_18d8e4292a8d4bcc2aa809f42d88eb91);
+            
+        
+
+        rectangle_b96daea81cb94a04cd9185e1fbb9d0bd.bindPopup(popup_20f2150e2bf5497eb057663c958c34e7)
+        ;
+
+        
+    
+    
+            var rectangle_3b224fb0869a2db6e5f51e7910392467 = L.rectangle(
+                [[-2.992463817104315, 104.73758148937209], [-2.9824638171043154, 104.74758148937208]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_a3d9f767e45afcbe34c5908cc668d449 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_753e9e84062928f583dff03039d0e121 = $(`<div id="html_753e9e84062928f583dff03039d0e121" style="width: 100.0%; height: 100.0%;">Ilir Barat IIPrediksi: Rendah</div>`)[0];
+                popup_a3d9f767e45afcbe34c5908cc668d449.setContent(html_753e9e84062928f583dff03039d0e121);
+            
+        
+
+        rectangle_3b224fb0869a2db6e5f51e7910392467.bindPopup(popup_a3d9f767e45afcbe34c5908cc668d449)
+        ;
+
+        
+    
+    
+            var rectangle_b11e72e6305f2b90db79e0a63a61c6cc = L.rectangle(
+                [[-3.013530401553627, 104.75746857093802], [-3.0035304015536273, 104.76746857093801]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_7890a790f067ef02414ea9a53f9ce036 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7b76ae1113ed4abe002fb9a482e0db08 = $(`<div id="html_7b76ae1113ed4abe002fb9a482e0db08" style="width: 100.0%; height: 100.0%;">SukaramiPrediksi: Tinggi</div>`)[0];
+                popup_7890a790f067ef02414ea9a53f9ce036.setContent(html_7b76ae1113ed4abe002fb9a482e0db08);
+            
+        
+
+        rectangle_b11e72e6305f2b90db79e0a63a61c6cc.bindPopup(popup_7890a790f067ef02414ea9a53f9ce036)
+        ;
+
+        
+    
+    
+            var rectangle_decc821d974e2d5e2cf2a803e3b014c4 = L.rectangle(
+                [[-2.9926591603060517, 104.7735045562581], [-2.982659160306052, 104.7835045562581]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_4ff8a1733dd4e8f7b026f591cfe6dcd6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d05c932e4b0cf13362c6f3146fda9241 = $(`<div id="html_d05c932e4b0cf13362c6f3146fda9241" style="width: 100.0%; height: 100.0%;">KemuningPrediksi: Rendah</div>`)[0];
+                popup_4ff8a1733dd4e8f7b026f591cfe6dcd6.setContent(html_d05c932e4b0cf13362c6f3146fda9241);
+            
+        
+
+        rectangle_decc821d974e2d5e2cf2a803e3b014c4.bindPopup(popup_4ff8a1733dd4e8f7b026f591cfe6dcd6)
+        ;
+
+        
+    
+    
+            var rectangle_cecd64717ff01ae12a86dd23b9349f4f = L.rectangle(
+                [[-2.999750822804163, 104.7416946367487], [-2.9897508228041634, 104.7516946367487]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_d0f4e97161d6601cff7480a33d2c6bd8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_11b01aac08802163ec837681b5786c81 = $(`<div id="html_11b01aac08802163ec837681b5786c81" style="width: 100.0%; height: 100.0%;">KalidoniPrediksi: Sedang</div>`)[0];
+                popup_d0f4e97161d6601cff7480a33d2c6bd8.setContent(html_11b01aac08802163ec837681b5786c81);
+            
+        
+
+        rectangle_cecd64717ff01ae12a86dd23b9349f4f.bindPopup(popup_d0f4e97161d6601cff7480a33d2c6bd8)
+        ;
+
+        
+    
+    
+            var rectangle_d18c49a67b9d97394c39c6c0a12d59e3 = L.rectangle(
+                [[-3.0026692200030594, 104.74593702270398], [-2.9926692200030596, 104.75593702270398]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_bb764190f3116ef599b377439c84368f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6d3b2b3385818ac29089a0660adfb9b4 = $(`<div id="html_6d3b2b3385818ac29089a0660adfb9b4" style="width: 100.0%; height: 100.0%;">SakoPrediksi: Rendah</div>`)[0];
+                popup_bb764190f3116ef599b377439c84368f.setContent(html_6d3b2b3385818ac29089a0660adfb9b4);
+            
+        
+
+        rectangle_d18c49a67b9d97394c39c6c0a12d59e3.bindPopup(popup_bb764190f3116ef599b377439c84368f)
+        ;
+
+        
+    
+    
+            var rectangle_96d2901c408ce5a4fae82fd279b2c603 = L.rectangle(
+                [[-2.989783237111591, 104.75259651365089], [-2.979783237111591, 104.76259651365088]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_d4e37a0877a3a7536539d2c6366e9fbe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f67d99818db73a3f2ff148b10aa7c238 = $(`<div id="html_f67d99818db73a3f2ff148b10aa7c238" style="width: 100.0%; height: 100.0%;">Bukit KecilPrediksi: Rendah</div>`)[0];
+                popup_d4e37a0877a3a7536539d2c6366e9fbe.setContent(html_f67d99818db73a3f2ff148b10aa7c238);
+            
+        
+
+        rectangle_96d2901c408ce5a4fae82fd279b2c603.bindPopup(popup_d4e37a0877a3a7536539d2c6366e9fbe)
+        ;
+
+        
+    
+    
+            var rectangle_ac12511b4c76b20905e3850adb399e8a = L.rectangle(
+                [[-2.98559000477504, 104.74656524345885], [-2.9755900047750403, 104.75656524345884]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_974252a983b504ff45c65e44cfb41a33 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_87f77a4f7d70a04fcdf3c6ee4b4a5be2 = $(`<div id="html_87f77a4f7d70a04fcdf3c6ee4b4a5be2" style="width: 100.0%; height: 100.0%;">Seberang Ulu IPrediksi: Sedang</div>`)[0];
+                popup_974252a983b504ff45c65e44cfb41a33.setContent(html_87f77a4f7d70a04fcdf3c6ee4b4a5be2);
+            
+        
+
+        rectangle_ac12511b4c76b20905e3850adb399e8a.bindPopup(popup_974252a983b504ff45c65e44cfb41a33)
+        ;
+
+        
+    
+    
+            var rectangle_f61811efb0f2412b6a2aec680ada8d8a = L.rectangle(
+                [[-2.986587198808838, 104.73609336568934], [-2.976587198808838, 104.74609336568933]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_d7627f85f3bf31b4ef96eb3e13e01334 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3ce25686b20b84f25e025345b91d7ea5 = $(`<div id="html_3ce25686b20b84f25e025345b91d7ea5" style="width: 100.0%; height: 100.0%;">Seberang Ulu IIPrediksi: Sedang</div>`)[0];
+                popup_d7627f85f3bf31b4ef96eb3e13e01334.setContent(html_3ce25686b20b84f25e025345b91d7ea5);
+            
+        
+
+        rectangle_f61811efb0f2412b6a2aec680ada8d8a.bindPopup(popup_d7627f85f3bf31b4ef96eb3e13e01334)
+        ;
+
+        
+    
+    
+            var rectangle_533b297e0e555eea07a07172aca51f34 = L.rectangle(
+                [[-3.004292175232226, 104.75228562974807], [-2.9942921752322262, 104.76228562974806]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_304c90c4d1257e712a3d38737d6a113f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_79b42c5c3a18cc907d94740f9cdc4c4e = $(`<div id="html_79b42c5c3a18cc907d94740f9cdc4c4e" style="width: 100.0%; height: 100.0%;">PlajuPrediksi: Tinggi</div>`)[0];
+                popup_304c90c4d1257e712a3d38737d6a113f.setContent(html_79b42c5c3a18cc907d94740f9cdc4c4e);
+            
+        
+
+        rectangle_533b297e0e555eea07a07172aca51f34.bindPopup(popup_304c90c4d1257e712a3d38737d6a113f)
+        ;
+
+        
+    
+    
+            var rectangle_ff2a2999d344829cd6a0cdcee5d4ccd5 = L.rectangle(
+                [[-2.9989921237585118, 104.74097696286275], [-2.988992123758512, 104.75097696286274]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_c6d9abc2af2e6bea25d4565b1d1a17e5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e6c17efb04593e35c7c480b7c293dd76 = $(`<div id="html_e6c17efb04593e35c7c480b7c293dd76" style="width: 100.0%; height: 100.0%;">KertapatiPrediksi: Tinggi</div>`)[0];
+                popup_c6d9abc2af2e6bea25d4565b1d1a17e5.setContent(html_e6c17efb04593e35c7c480b7c293dd76);
+            
+        
+
+        rectangle_ff2a2999d344829cd6a0cdcee5d4ccd5.bindPopup(popup_c6d9abc2af2e6bea25d4565b1d1a17e5)
+        ;
+
+        
+    
+    
+            var rectangle_84f9991f5dc74dd16f9abaea57516ae0 = L.rectangle(
+                [[-2.992587365685964, 104.75633592430636], [-2.9825873656859643, 104.76633592430635]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_0d2dc2087d251a4f4c277e490113760f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_31ea2f14b40e468cbe9b81607d2682ad = $(`<div id="html_31ea2f14b40e468cbe9b81607d2682ad" style="width: 100.0%; height: 100.0%;">Alang-Alang LebarPrediksi: Rendah</div>`)[0];
+                popup_0d2dc2087d251a4f4c277e490113760f.setContent(html_31ea2f14b40e468cbe9b81607d2682ad);
+            
+        
+
+        rectangle_84f9991f5dc74dd16f9abaea57516ae0.bindPopup(popup_0d2dc2087d251a4f4c277e490113760f)
+        ;
+
+        
+    
+    
+            var rectangle_a88f592c090c067a44cbfb953826e7f8 = L.rectangle(
+                [[-2.986144548728776, 104.74240575765768], [-2.9761445487287763, 104.75240575765767]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_ede23e7485515f4dc4863d7d7e7a2647 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b52ca88ef8ea3e0ef078c6b579866a4b = $(`<div id="html_b52ca88ef8ea3e0ef078c6b579866a4b" style="width: 100.0%; height: 100.0%;">GandusPrediksi: Tinggi</div>`)[0];
+                popup_ede23e7485515f4dc4863d7d7e7a2647.setContent(html_b52ca88ef8ea3e0ef078c6b579866a4b);
+            
+        
+
+        rectangle_a88f592c090c067a44cbfb953826e7f8.bindPopup(popup_ede23e7485515f4dc4863d7d7e7a2647)
+        ;
+
+        
+    
+    
+            var rectangle_a99829aaea2a9741190ed2bb332ff0fe = L.rectangle(
+                [[-3.0006917423784527, 104.76709934405018], [-2.990691742378453, 104.77709934405017]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_e1ce4b9b0d7b0e9994f955cdd9d01338 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cc2c1d8aee2f9db4d0a9b233a006fa9f = $(`<div id="html_cc2c1d8aee2f9db4d0a9b233a006fa9f" style="width: 100.0%; height: 100.0%;">Ilir Timur IPrediksi: Tinggi</div>`)[0];
+                popup_e1ce4b9b0d7b0e9994f955cdd9d01338.setContent(html_cc2c1d8aee2f9db4d0a9b233a006fa9f);
+            
+        
+
+        rectangle_a99829aaea2a9741190ed2bb332ff0fe.bindPopup(popup_e1ce4b9b0d7b0e9994f955cdd9d01338)
+        ;
+
+        
+    
+    
+            var rectangle_ffc4f7155edf510bb8aa19da98fde42e = L.rectangle(
+                [[-2.997756589766638, 104.74376746707665], [-2.9877565897666383, 104.75376746707664]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_f936ffb4482fc856d9b1453f6ec56f26 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_132caa7c43bf97ff7d7644b6e0a4cc6c = $(`<div id="html_132caa7c43bf97ff7d7644b6e0a4cc6c" style="width: 100.0%; height: 100.0%;">Ilir Timur IIPrediksi: Sedang</div>`)[0];
+                popup_f936ffb4482fc856d9b1453f6ec56f26.setContent(html_132caa7c43bf97ff7d7644b6e0a4cc6c);
+            
+        
+
+        rectangle_ffc4f7155edf510bb8aa19da98fde42e.bindPopup(popup_f936ffb4482fc856d9b1453f6ec56f26)
+        ;
+
+        
+    
+    
+            var rectangle_69233d945c81f288aa6a07c510c3c6f5 = L.rectangle(
+                [[-3.00696334974006, 104.74837938483796], [-2.99696334974006, 104.75837938483795]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_ea59e8c9439245b60a7a2674eae00576 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d27f1b6b17990a0938eb272a7b54cc56 = $(`<div id="html_d27f1b6b17990a0938eb272a7b54cc56" style="width: 100.0%; height: 100.0%;">Ilir Barat IPrediksi: Sedang</div>`)[0];
+                popup_ea59e8c9439245b60a7a2674eae00576.setContent(html_d27f1b6b17990a0938eb272a7b54cc56);
+            
+        
+
+        rectangle_69233d945c81f288aa6a07c510c3c6f5.bindPopup(popup_ea59e8c9439245b60a7a2674eae00576)
+        ;
+
+        
+    
+    
+            var rectangle_0d9a00049c34ac5d4b4ac7c17c006881 = L.rectangle(
+                [[-3.0078620662408064, 104.7597351721737], [-2.9978620662408066, 104.7697351721737]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_18774b2684a9ae95a9de589612cff85a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_997b4c6bb430ba0c84c6c564a0ead6a1 = $(`<div id="html_997b4c6bb430ba0c84c6c564a0ead6a1" style="width: 100.0%; height: 100.0%;">Ilir Barat IIPrediksi: Rendah</div>`)[0];
+                popup_18774b2684a9ae95a9de589612cff85a.setContent(html_997b4c6bb430ba0c84c6c564a0ead6a1);
+            
+        
+
+        rectangle_0d9a00049c34ac5d4b4ac7c17c006881.bindPopup(popup_18774b2684a9ae95a9de589612cff85a)
+        ;
+
+        
+    
+    
+            var rectangle_6c8b2556b3d9b07367ba47a33c247851 = L.rectangle(
+                [[-2.987774741776058, 104.73929135683566], [-2.977774741776058, 104.74929135683566]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_ead6c951f03c5b1f3c0352f7e2787457 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a956d1479dc099ea73dc0ca65719a7d9 = $(`<div id="html_a956d1479dc099ea73dc0ca65719a7d9" style="width: 100.0%; height: 100.0%;">SukaramiPrediksi: Tinggi</div>`)[0];
+                popup_ead6c951f03c5b1f3c0352f7e2787457.setContent(html_a956d1479dc099ea73dc0ca65719a7d9);
+            
+        
+
+        rectangle_6c8b2556b3d9b07367ba47a33c247851.bindPopup(popup_ead6c951f03c5b1f3c0352f7e2787457)
+        ;
+
+        
+    
+    
+            var rectangle_0e06efd5b711839b0c5cd1167f9765d5 = L.rectangle(
+                [[-2.9823375997142914, 104.75387459934605], [-2.9723375997142916, 104.76387459934604]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_7e618ecd842901b56026ebbfb81828e0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9308dc2c5710683765caa6b9f6533902 = $(`<div id="html_9308dc2c5710683765caa6b9f6533902" style="width: 100.0%; height: 100.0%;">KemuningPrediksi: Sedang</div>`)[0];
+                popup_7e618ecd842901b56026ebbfb81828e0.setContent(html_9308dc2c5710683765caa6b9f6533902);
+            
+        
+
+        rectangle_0e06efd5b711839b0c5cd1167f9765d5.bindPopup(popup_7e618ecd842901b56026ebbfb81828e0)
+        ;
+
+        
+    
+    
+            var rectangle_c1379c7a9e8ca04a73b9bd7851fd16b0 = L.rectangle(
+                [[-2.996620101215803, 104.76467142754284], [-2.986620101215803, 104.77467142754283]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_67a11fed61dc43ed50ad7235d325fefe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_df38c70b3fc7e0ec951a6b198534b3b7 = $(`<div id="html_df38c70b3fc7e0ec951a6b198534b3b7" style="width: 100.0%; height: 100.0%;">KalidoniPrediksi: Rendah</div>`)[0];
+                popup_67a11fed61dc43ed50ad7235d325fefe.setContent(html_df38c70b3fc7e0ec951a6b198534b3b7);
+            
+        
+
+        rectangle_c1379c7a9e8ca04a73b9bd7851fd16b0.bindPopup(popup_67a11fed61dc43ed50ad7235d325fefe)
+        ;
+
+        
+    
+    
+            var rectangle_2756ce98e2c7e289297c9cfbe59db8ee = L.rectangle(
+                [[-2.9858646710210794, 104.7355251676544], [-2.9758646710210797, 104.74552516765439]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_401486dc8332ec9211578d22ae32b6e7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_598245caab1c0775b8ed59633cb2a91f = $(`<div id="html_598245caab1c0775b8ed59633cb2a91f" style="width: 100.0%; height: 100.0%;">SakoPrediksi: Tinggi</div>`)[0];
+                popup_401486dc8332ec9211578d22ae32b6e7.setContent(html_598245caab1c0775b8ed59633cb2a91f);
+            
+        
+
+        rectangle_2756ce98e2c7e289297c9cfbe59db8ee.bindPopup(popup_401486dc8332ec9211578d22ae32b6e7)
+        ;
+
+        
+    
+    
+            var rectangle_05443cf28875d2bb0a731ae84f6ee2fe = L.rectangle(
+                [[-2.9922836397495236, 104.75344633858533], [-2.982283639749524, 104.76344633858533]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_97bdd77a31dcb707f3af330e2aa3dd85 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ed52dcdec6440de4c91a52c606c1a60c = $(`<div id="html_ed52dcdec6440de4c91a52c606c1a60c" style="width: 100.0%; height: 100.0%;">Bukit KecilPrediksi: Sedang</div>`)[0];
+                popup_97bdd77a31dcb707f3af330e2aa3dd85.setContent(html_ed52dcdec6440de4c91a52c606c1a60c);
+            
+        
+
+        rectangle_05443cf28875d2bb0a731ae84f6ee2fe.bindPopup(popup_97bdd77a31dcb707f3af330e2aa3dd85)
+        ;
+
+        
+    
+    
+            var rectangle_766a890fa37bbee3cf4e497cd35913c6 = L.rectangle(
+                [[-3.002351197546051, 104.75419882794249], [-2.9923511975460513, 104.76419882794248]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_21add0705a48c75f24d8735e6bd6993e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dcd7d235ce4bea8491949f7aedcdaa20 = $(`<div id="html_dcd7d235ce4bea8491949f7aedcdaa20" style="width: 100.0%; height: 100.0%;">Seberang Ulu IPrediksi: Sedang</div>`)[0];
+                popup_21add0705a48c75f24d8735e6bd6993e.setContent(html_dcd7d235ce4bea8491949f7aedcdaa20);
+            
+        
+
+        rectangle_766a890fa37bbee3cf4e497cd35913c6.bindPopup(popup_21add0705a48c75f24d8735e6bd6993e)
+        ;
+
+        
+    
+    
+            var rectangle_3567b64e068fdfb3cb6300fe850bd45c = L.rectangle(
+                [[-2.9922860439449157, 104.75941822871778], [-2.982286043944916, 104.76941822871777]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_f547a78020ad55ece66a547d879aa4aa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0e5f33f76c32181077e5b456dc3a7301 = $(`<div id="html_0e5f33f76c32181077e5b456dc3a7301" style="width: 100.0%; height: 100.0%;">Seberang Ulu IIPrediksi: Rendah</div>`)[0];
+                popup_f547a78020ad55ece66a547d879aa4aa.setContent(html_0e5f33f76c32181077e5b456dc3a7301);
+            
+        
+
+        rectangle_3567b64e068fdfb3cb6300fe850bd45c.bindPopup(popup_f547a78020ad55ece66a547d879aa4aa)
+        ;
+
+        
+    
+    
+            var rectangle_2e87834db77cee3ed1eccb0a584a2cfc = L.rectangle(
+                [[-2.98051963433534, 104.73923049289122], [-2.97051963433534, 104.74923049289121]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_7c30377af72ed70c77dee32508a95d5e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ff444183b89a054e18bf8f3e8edaf975 = $(`<div id="html_ff444183b89a054e18bf8f3e8edaf975" style="width: 100.0%; height: 100.0%;">PlajuPrediksi: Rendah</div>`)[0];
+                popup_7c30377af72ed70c77dee32508a95d5e.setContent(html_ff444183b89a054e18bf8f3e8edaf975);
+            
+        
+
+        rectangle_2e87834db77cee3ed1eccb0a584a2cfc.bindPopup(popup_7c30377af72ed70c77dee32508a95d5e)
+        ;
+
+        
+    
+    
+            var rectangle_32bc08cfbce0ed12fb7a384ec3fde56e = L.rectangle(
+                [[-2.9962582603910994, 104.73839543386917], [-2.9862582603910997, 104.74839543386916]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_a17c1239b04c4e5deb136aad8a49fa6c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf9532415153e9a2e955a6e25ae76d87 = $(`<div id="html_bf9532415153e9a2e955a6e25ae76d87" style="width: 100.0%; height: 100.0%;">KertapatiPrediksi: Tinggi</div>`)[0];
+                popup_a17c1239b04c4e5deb136aad8a49fa6c.setContent(html_bf9532415153e9a2e955a6e25ae76d87);
+            
+        
+
+        rectangle_32bc08cfbce0ed12fb7a384ec3fde56e.bindPopup(popup_a17c1239b04c4e5deb136aad8a49fa6c)
+        ;
+
+        
+    
+    
+            var rectangle_008c035c271e02ac2ef04703af16e723 = L.rectangle(
+                [[-2.9802535634418597, 104.75681941565618], [-2.97025356344186, 104.76681941565617]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_e0bfe2b2078af75ad2d9a427c856ac98 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_688e9cf69fc3f078a377a2569835f8b1 = $(`<div id="html_688e9cf69fc3f078a377a2569835f8b1" style="width: 100.0%; height: 100.0%;">Alang-Alang LebarPrediksi: Sedang</div>`)[0];
+                popup_e0bfe2b2078af75ad2d9a427c856ac98.setContent(html_688e9cf69fc3f078a377a2569835f8b1);
+            
+        
+
+        rectangle_008c035c271e02ac2ef04703af16e723.bindPopup(popup_e0bfe2b2078af75ad2d9a427c856ac98)
+        ;
+
+        
+    
+    
+            var rectangle_6f39c13c6038081382a10e6c11b22e64 = L.rectangle(
+                [[-3.022097451040897, 104.75456984673234], [-3.0120974510408973, 104.76456984673233]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_2f50a58a666ede5e154f9fa8989e50c4);
+        
+    
+        var popup_d7596cb63dc26e0d2af7f17eda53c742 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_168f09dfa3b02f5acb2cc1dfe42341cc = $(`<div id="html_168f09dfa3b02f5acb2cc1dfe42341cc" style="width: 100.0%; height: 100.0%;">GandusPrediksi: Sedang</div>`)[0];
+                popup_d7596cb63dc26e0d2af7f17eda53c742.setContent(html_168f09dfa3b02f5acb2cc1dfe42341cc);
+            
+        
+
+        rectangle_6f39c13c6038081382a10e6c11b22e64.bindPopup(popup_d7596cb63dc26e0d2af7f17eda53c742)
+        ;
+
+        
+    
+    
+            marker_cluster_2f50a58a666ede5e154f9fa8989e50c4.addTo(map_6c9c5f35edc4f4812f798dfe6237d853);
+        
+</script>
+</html>
